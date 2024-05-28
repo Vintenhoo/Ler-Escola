@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+    background-image: url(imagens/fundosla2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden; /* Adicione isso para esconder qualquer possível overflow horizontal */
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 100%; /* Certifique-se de que a barra de navegação não excede a largura da tela */
+}
+
+.navbar .barra-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .barra-nav img {
+    margin-right: 10px;
+    width: 90px;
+    height: auto; 
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FF3131;
+    vertical-align: middle;
+    margin-right: 20px;
+    transition: color 0.3s; /* Adiciona transição suave para a cor do texto */
+}
+
+nav ul li a:hover {
+    color: #b30303; /* Muda a cor do texto ao passar o mouse */
+}
+
+.navbar .barra-funcoes ul li img {
+    margin-right: 3px;
+    vertical-align: middle;
+    width: 15px;
+    height: auto;
+}
+
+#logoutLink img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    transition: filter 0.3s; /* Adiciona transição suave para o filtro da imagem */
+}
+
+#logoutLink img:hover {
+    filter: brightness(0.10); /* Muda o brilho da imagem ao passar o mouse */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calendar-container {
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: -200px;
+}
+
+.header {
+    background-color: #FF3131;
+    color: white;
+    padding: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    gap: 10px;
+}
+
+.day {
+    flex: 1;
+    text-align: center;
+}
+
+.day span {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    background-color: #31A8FF; /* Aplica o fundo azul somente ao texto do dia */
+    padding: 15px; /* Padding para dar espaço ao redor do texto dentro do background */
+    margin-bottom: 10px; /* Espaço abaixo de cada dia, se necessário */
+}
+
+.subjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+}
+
+.subjects a {  
+    background-color: #BAB3B3;
+    padding: 20px;
+    width: 200px;
+    color: black; 
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    width: 210px;
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição suave para a cor de fundo e transformação */
+}
+
+.subjects a:hover {
+    background-color: #FF3131; /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    color: white; /* Muda a cor do texto para branco */
+}
+
+.modules {
+    display: flex;
+    justify-content: space-between; /* Centraliza os botões horizontalmente */
+    padding: 0; /* Remove padding para eliminar espaçamento */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 20px; /* Espaço entre os dias da semana e os botões */
+}
+
+.modules button {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #FF3131;
+    height: 60px 300px;
+    width: 350px;
+    padding: 15px 30px; /* Ajuste conforme necessário */
+    border: none; /* Remove a borda preta */
+    outline: none; /* Remove a borda de foco */
+    cursor: pointer; /* Adiciona um cursor pointer para indicar que é clicável */
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição suave para a cor de fundo e transformação */
+}
+
+.modules button:hover {
+    background-color: #b30303; /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+}
+
+@media (max-width: 600px) {
+    /* Suas regras CSS existentes */
+
+    /* Adicione novas regras para a barra de navegação aqui */
+    .navbar {
+        padding: 10px; /* Reduz o espaço entre os itens da barra de navegação */
+        justify-content: space-between; /* Alinha a logo e o botão do menu à esquerda e à direita */
+    }
+
+    .navbar .barra-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .barra-nav img {
+        width: 70px; /* Reduz o tamanho do logo na barra de navegação */
+    }
+
+    nav ul li a {
+        font-size: 10px;
+        display: inline; /* Transforma os links em elementos de bloco */
+        text-decoration: none;
+        color: #FF3131; /* Define a cor do texto */
+        transition: color 0.3s; /* Adiciona uma transição suave para a cor do texto */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .calendar-container {
+        padding: 10px; /* Adiciona um padding interno para separar o conteúdo das bordas */
+        text-align: center;
+        margin: 0 auto; /* Centraliza o container na tela */
+        max-width: 100%; /* Garante que o container não ultrapasse a largura da tela */
+    }
+
+    .header {
+        font-size: 30px; /* Reduz o tamanho da fonte do cabeçalho para caber melhor em telas menores */
+        margin-bottom: 20px; /* Aumenta a margem inferior para separar o cabeçalho dos dias da semana */
+    }
+
+    .weekdays {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os dias da semana se ajustem automaticamente em telas menores */
+        justify-content: space-around; /* Distribui os dias da semana horizontalmente */
+    }
+
+    .day {
+        flex-basis: 45%; /* Define a largura de cada dia da semana para ocupar metade da largura da tela em telas menores */
+        margin-bottom: 10px; /* Adiciona espaço entre os dias da semana */
+    }
+
+    .day span {
+        font-size: 18px; /* Reduz o tamanho da fonte do nome do dia da semana */
+    }
+
+    .subjects a {
+        padding: 15px; /* Reduz o padding dos links para economizar espaço */
+        font-size: 16px; /* Reduz o tamanho da fonte dos links */
+    }
+
+    .modules {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os botões dos módulos se ajustem automaticamente em telas menores */
+        justify-content: space-around; /* Distribui os botões horizontalmente */
+    }
+
+    .modules button {
+        width: 45%; /* Define a largura de cada botão de módulo para ocupar metade da largura da tela em telas menores */
+        margin-bottom: 10px; /* Adiciona espaço entre os botões */
+        font-size: 16px; /* Reduz o tamanho da fonte dos botões */
+    }
+}

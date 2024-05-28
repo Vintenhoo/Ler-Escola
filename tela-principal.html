@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ler Escola - Calendário</title>
+    <link rel="stylesheet" href="stylesPrincipal.css">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/logored.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="barra-nav">
+            <img src="imagens/logored.png" alt="logo-ler-escola">
+        </div>
+        <div class="barra-funcoes">
+            <ul>
+                <li><a href="notificacao.html" id="notificationsLink"><img src="imagens/notifi.png" alt="Notificações"> Notificações</a></li>
+                <li><a href="tela-principal.html" id="calendarLink"><img src="imagens/calendario.png" alt="Calendário"> Calendário</a></li>
+                <li><a href="index.html" id="logoutLink"><img src="imagens/mage_logout.png" alt="Sair"> </a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="calendar-container">
+            <div class="header">
+                Avaliações da Semana
+            </div>
+            <div class="weekdays">
+                <div class="day day-segunda">
+                    <span>Segunda</span>
+                    <div class="subjects">
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Ciências</a>
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Matemática</a>
+                    </div>
+                </div>
+                <div class="day day-terca">
+                    <span>Terça</span>
+                    <div class="subjects">
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">História</a>
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Geografia</a>
+                    </div>
+                </div>
+                <div class="day day-quarta">
+                    <span>Quarta</span>
+                    <div class="subjects">
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Português</a>
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Inglês</a>
+                    </div>
+                </div>
+                <div class="day day-quinta">
+                    <span>Quinta</span>
+                    <div class="subjects">
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Educação Física</a>
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Artes</a>
+                    </div>
+                </div>
+                <div class="day day-sexta">
+                    <span>Sexta</span>
+                    <div class="subjects">
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Física</a>
+                        <a href="https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing">Química</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modules">
+                <button id="modulo-01">MÓDULO 01</button>
+                <button id="modulo-02">MÓDULO 02</button>
+                <button id="modulo-03">MÓDULO 03</button>   
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const moduloData = {
+            "modulo-01": {
+                segunda: [
+                    { subject: "Ciências", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Matemática", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                terca: [
+                    { subject: "História", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Geografia", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                quarta: [
+                    { subject: "Português", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Inglês", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                quinta: [
+                    { subject: "Educação Física", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Artes", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                sexta: [
+                    { subject: "Física", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Química", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ]
+            },
+            "modulo-02": {
+                segunda: [
+                    { subject: "Biologia", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Filosofia", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                terca: [
+                    { subject: "Sociologia", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Matemática", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                quarta: [
+                    { subject: "Química", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Física", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                quinta: [
+                    { subject: "Literatura", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Geografia", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                sexta: [
+                    { subject: "História", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Educação Física", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ]
+            },
+            "modulo-03": {
+                segunda: [
+                    { subject: "Ciências", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "História", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                terca: [
+                    { subject: "Português", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Matemática", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                quarta: [
+                    { subject: "Artes", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Inglês", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                quinta: [
+                    { subject: "Geografia", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Física", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ],
+                sexta: [
+                    { subject: "Educação Física", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" },
+                    { subject: "Química", url: "https://drive.google.com/drive/folders/1XqLCTgcoY8FDbqVd_CsB7YmOYw0NLekl?usp=sharing" }
+                ]
+            }
+        };
+
+        function updateCalendar(modulo) {
+            const days = ["segunda", "terca", "quarta", "quinta", "sexta"];
+            days.forEach(day => {
+                const dayElement = document.querySelector(`.day-${day} .subjects`);
+                dayElement.innerHTML = ""; // Limpa os itens atuais
+                moduloData[modulo][day].forEach(item => {
+                    const a = document.createElement('a');
+                    a.href = item.url;
+                    a.textContent = item.subject;
+                    dayElement.appendChild(a);
+                });
+            });
+        }
+
+        document.getElementById("modulo-01").addEventListener("click", () => updateCalendar("modulo-01"));
+        document.getElementById("modulo-02").addEventListener("click", () => updateCalendar("modulo-02"));
+        document.getElementById("modulo-03").addEventListener("click", () => updateCalendar("modulo-03"));
+    </script>
+</body>
+</html>

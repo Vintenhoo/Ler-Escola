@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+    background-image: url(imagens/fundosla2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 40px;
+}
+
+.navbar .barra-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .barra-nav img {
+    margin-right: 10px;
+    width: 90px;
+    height: auto; 
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FF3131;
+    vertical-align: middle;
+    margin-right: 20px;
+    transition: color 0.3s; /* Adiciona transição suave para a cor do texto */
+}
+
+nav ul li a:hover {
+    color: #b30303; /* Muda a cor do texto ao passar o mouse */
+}
+
+.navbar .barra-funcoes ul li img {
+    margin-right: 3px;
+    vertical-align: middle;
+    width: 15px;
+    height: auto;
+}
+
+#logoutLink img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    transition: filter 0.3s; /* Adiciona transição suave para o filtro da imagem */
+}
+
+#logoutLink img:hover {
+    filter: brightness(0.10); /* Muda o brilho da imagem ao passar o mouse */
+}
+
+.aviso-container {
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1115px;
+    margin-top: 85px;
+}
+
+.header {
+    background-color: #FF3131;
+    color: white;
+    padding: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+span {
+    text-align: start;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    height: 300px;
+    background-color: #999999; /* Aplica o fundo azul somente ao texto do dia */
+    padding: 15px; /* Padding para dar espaço ao redor do texto dentro do background */
+    margin-bottom: 10px; /* Espaço abaixo de cada dia, se necessário */
+}
+
+/* Estilos para dispositivos móveis e tablets */
+
+@media (max-width: 600px) {
+    /* Suas regras CSS existentes */
+
+    /* Adicione novas regras para a barra de navegação aqui */
+    .navbar {
+        padding: 10px; /* Reduz o espaço entre os itens da barra de navegação */
+        justify-content: space-between; /* Alinha a logo e o botão do menu à esquerda e à direita */
+    }
+
+    .navbar .barra-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .barra-nav img {
+        width: 70px; /* Reduz o tamanho do logo na barra de navegação */
+    }
+
+    nav ul li a {
+        font-size: 10px;
+        display: inline; /* Transforma os links em elementos de bloco */
+        text-decoration: none;
+        color: #FF3131; /* Define a cor do texto */
+        transition: color 0.3s; /* Adiciona uma transição suave para a cor do texto */
+    }
+}
+
+@media (max-width: 768px) {
+    .aviso-container {
+        padding: 0 10px; /* Adiciona um padding interno para separar o conteúdo das bordas */
+        margin-top: 20px; /* Reduz a margem superior */
+    }
+
+    .header {
+        font-size: 30px; /* Reduz o tamanho da fonte do cabeçalho para caber melhor em telas menores */
+        margin-bottom: 20px; /* Aumenta a margem inferior para separar o cabeçalho dos avisos */
+    }
+
+    span {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        height: auto; /* Remove a altura fixa */
+        padding: 15px; /* Ajusta o padding */
+    }
+}
