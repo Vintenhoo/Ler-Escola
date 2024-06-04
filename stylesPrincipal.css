@@ -174,6 +174,17 @@ main {
     transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
 }
 
+/* BOTÕES PARA OS MÓDULOS */
+
+#modulo-02{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 600px) {
     /* Suas regras CSS existentes */
 
